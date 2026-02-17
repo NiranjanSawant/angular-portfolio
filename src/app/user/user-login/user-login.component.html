@@ -1,0 +1,50 @@
+<table>
+  <thead>
+      <tr>
+          <th attr.colspan={{Columnspn}}>
+              {{pageHeader}}
+          </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>First Name</td>
+          <td [ngClass]="ApplyClasses()">{{FirstName}}</td>
+      </tr>
+      <tr>
+          <td>Last Name</td>
+          <td>{{LastName}}</td>
+      </tr>
+      <tr *ngIf="Showdetail">
+          <td>Branch</td>
+          <td>{{Branch}}</td>
+      </tr>
+      <tr *ngIf="Showdetail">
+          <td>Mobile</td>
+          <td>{{Mobile}}</td>
+      </tr>
+      <tr *ngIf="Showdetail">
+          <td>Gender</td>
+          <td>{{Gender}}</td>
+      </tr>
+      <tr *ngIf="Showdetail">
+          <td>Age</td>
+          <td>{{Age}}</td>
+      </tr>
+  </tbody>
+</table>
+<button (click)="ToggleDetails() ">
+{{Showdetail ? 'Hide':'Show'}} Detailsss
+</button>
+<a [routerLink]="['/RegistrationPath']" class="btn btn-primary">User Registration</a>
+<div>
+              <!-- Name : <input [value]='FirstName' (input)='FirstName=$event.target.value'> -->
+             <!-- Name :    <input [value]='FirstName' (input) = 'FirstName = $any($event.target).value'> -->
+              <input [(ngModel)]="FirstName">
+                <!-- Name : <input [value]='FirstName'> -->
+              <br>
+              You entered : {{FirstName}}
+            </div>
+           <div class="container">
+            <div class="row"></div>
+           </div>

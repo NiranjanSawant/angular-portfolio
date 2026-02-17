@@ -1,0 +1,135 @@
+<!-- <div class="container">
+<div class="row">
+   <div class="form-bg"> -->
+    <!-- <form [formGroup]="registrationForm" #userRegisterForm="ngForm" (submit)="RegisterNewUser()"> -->
+    <form [formGroup]="registrationForm"  (ngSubmit)="RegisterNewUser()">
+    <!-- <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h3 class="panel-title">User Registration</h3>
+     </div>
+     <div class="panel-body"> -->
+     <!-- <div class="form-group">
+       <label for="firstName">First Name</label>
+       <input id="firstName" type="text" class="form-control" name="firstName" [(ngModel)]="service.formData.firstName">
+     </div> -->
+     <!-- <div class="row"> -->
+ <div  style="min-height: 100vh;">
+  <mat-card style="width: 400px; padding: 20px;">
+     <h2 style="text-align: center; margin-bottom: 20px;">Register</h2>
+     <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput type="text"   formControlName="firstName" >
+        <mat-error *ngIf="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched">
+          Name is required
+        </mat-error>
+       
+     </mat-form-field>
+     <!-- </div> -->
+      <!-- <div class="form-group">
+        <label for="middleName">Middle Name</label>
+         <input id="middleName" type="text" class="form-control"
+              name="middleName" [(ngModel)]="service.formData.middleName">
+      </div> -->
+      <!-- <div class="row"> -->
+        <mat-form-field>
+      <mat-label>Middle Name</mat-label>
+      <input matInput type="text"   formControlName="middleName"  >
+     </mat-form-field>
+     <!-- </div> -->
+       <!-- <div class="form-group">
+        <label for="lastName">Last Name</label>
+         <input id="lastName" type="text" class="form-control"
+              name="lastName" [(ngModel)]="service.formData.lastName">
+      </div> -->
+        <!-- <div class="row"> -->
+       <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text"   formControlName="lastName" >
+     </mat-form-field>
+     <!-- </div> -->
+      <!-- <div class="form-group">
+        <label for="emailId">Email</label>
+         <input id="emailId" type="text" class="form-control"
+            name="emailId" [(ngModel)]="service.formData.emailId">
+      </div> -->
+       <!-- <div class="row"> -->
+       <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="text"  formControlName="emailId" >
+       <mat-error *ngIf="registrationForm.get('emailId')?.hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="registrationForm.get('emailId')?.hasError('email')">
+        Invalid email address
+      </mat-error>
+     </mat-form-field>
+     <!-- </div> -->
+      <!-- <div class="form-group">
+                  <label>Gender</label>
+                  <div class="form-control">
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" value="male" [(ngModel)]="service.formData.emailId" >
+                      Male
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" value="female"  [(ngModel)]="service.formData.emailId" >
+                      Female
+                    </label>
+                  </div>
+          </div> -->
+           <!-- <div class="row"> -->
+          <mat-radio-group  formControlName="Gender" >
+            <mat-radio-button value="male">Male</mat-radio-button>
+             <mat-radio-button value="female">Female</mat-radio-button>
+          </mat-radio-group>
+          <!-- </div> -->
+          <!-- <div class="form-group" hidden>
+             <label for="branch">Branch</label>
+                <select id="branch" name="branch" class="form-control" ngModel>
+                    <option *ngFor="let brnch of branchList" [value]="brnch.Id">
+                       {{brnch.branchname}}
+                    </option>
+                </select>
+          </div> -->
+           <!-- <div class="form-group">
+        <label for="DOB">DOB</label>
+         <input id="DOB" type="text" class="form-control"
+            name="DOB" [(ngModel)]="service.formData.DOB">
+      </div> -->
+      <mat-form-field>
+        <mat-label>DOB</mat-label>
+        <input matInput [matDatepicker]="picker" type="text" formControlName="DOB" >
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+
+           <!-- <div class="form-group">
+                  <div class="form-control">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="isAccept"  [(ngModel)]="service.formData.DOB">Accept Terms & Conditions
+                    </label>
+                  </div>
+          </div> -->
+           <!-- <div class="row"> -->
+        <mat-checkbox   formControlName="isAccept" >Accept Terms & Conditions</mat-checkbox>
+        <!-- </div>
+     </div> -->
+    <!-- <div class="panel-footer"> -->
+<!-- <button class="btn btn-primary" (click)="RegisterNewUser()">Submit</button> -->
+ <!-- <button mat-raised-button color="primary" (click)="RegisterNewUser()">
+          Register
+        </button> -->
+        <button mat-raised-button color="primary" type="submit">
+          Register
+        </button>
+        </mat-card>
+</div>
+
+    <!-- </div>
+    </div> -->
+    </form>
+
+   <!-- </div>
+</div>
+</div> -->
